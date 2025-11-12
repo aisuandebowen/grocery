@@ -35,10 +35,9 @@ async def exchange_rate_main():
 
 async def run():
     # 并发执行
-    await asyncio.gather(
-        stock_main(),
-        exchange_rate_main(),
-    )
+    tasks = [stock_main(), exchange_rate_main()]
+    for coro in asyncio.as_completed(tasks):
+        await coro
 
 
 if __name__ == '__main__':
