@@ -1,5 +1,6 @@
 name: generality
 channels:
+  - conda-forge
   - defaults
 dependencies:
   - defaults/osx-arm64::patch==2.7.6=h1a28f6b_1001
