@@ -55,7 +55,7 @@ async def exchange_rate_main():
                                                            goal_diff=goal_diff)
         print('获取汇率成功')
     except Exception as e:
-        print(e)
+        print('获取汇率失败', e)
         str_arr = []
 
     return str_arr

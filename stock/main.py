@@ -1,15 +1,25 @@
 import asyncio
 import time
+from datetime import datetime
 
 from main_task import run_once
 
-INTERVAL_SEC = 0.1 * 60
+INTERVAL_SEC = 60 * 60
+
+
+def check_time(time_goal=17):
+    now = datetime.now()
+    hour = now.hour
+
+    return time_goal == hour
 
 
 def run():
     while True:
         try:
-            asyncio.run(run_once())
+            flag = check_time()
+            if flag:
+                asyncio.run(run_once())
         except Exception as e:
             print(e)
 
