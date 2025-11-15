@@ -31,7 +31,7 @@ class EXCHANGE_RATE_CLIENT:
             else:
                 my_rate = 1 / rate_now
                 str_atob = f'{cur_name}->RMB'
-            str = f'{str_atob}: {my_rate}，目标价：{b_goal}，'
+            str = f'{str_atob}: {my_rate}：目标价：{b_goal}，'
 
             is_arrived, precent_spread = is_price_arrived(b_goal, my_rate, goal_diff)
             if is_arrived:

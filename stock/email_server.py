@@ -34,6 +34,6 @@ if __name__ == "__main__":
     to_email = "boenchen0839@gmail.com"
     subject = f'测试 {time.strftime("%Y/%m/%d %H:%M:%S")}'
     text = f'test'
-    
+
     email = MYMAIL(token, from_email, to_email)
     email.send_email(subject, text)

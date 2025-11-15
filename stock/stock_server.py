@@ -38,7 +38,7 @@ class STOCK_CLIENT:
                 price = stock_info_now[3]
                 # 距离买入价剩百分之多少
                 buy = stocks_goal[code]['b']
-                str = f'{name}({code})，当前价{price}-->目标价{buy}，'
+                str = f'{name}({code})：当前价{price}-->目标价{buy}，'
                 is_arrived, precent_spread = is_price_arrived(buy, price, goal_diff)
                 if is_arrived:
                     str += f'仅需{100 * precent_spread:.2f}%,已接近目标价'
